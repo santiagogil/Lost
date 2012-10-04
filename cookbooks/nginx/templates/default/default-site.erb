@@ -4,7 +4,7 @@ server {
 
   	access_log  <%= node['nginx']['log_dir'] %>/localhost.access.log;
 
-  	root   /home/vagrant/projects;
+  	root   /home/vagrant/webroot;
   	index  index.php;
 
  	location ~ \.php$ {

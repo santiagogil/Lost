@@ -4,7 +4,7 @@ Vagrant::Config.run do  | config |
 	
 	config.vm.forward_port 80, 5080
 	config.vm.forward_port 3306, 3307
-	config.vm.share_folder "public_html" , "/home/vagrant/projects", "~/projects"
+	config.vm.share_folder "public_html" , "/home/vagrant/webroot", "./webroot/"
  
  	config.vm.provision :chef_solo do |chef|
 		chef.cookbooks_path = ["cookbooks"]
@@ -25,7 +25,7 @@ Vagrant::Config.run do  | config |
 				"allow_remote_root" 	=> true 
 			},
 			"xdebug" => {
-				"remote_host" 	=> "192.168.1.102",
+				"remote_host" 	=> "10.0.0.2",
 				"remote_port" 	=> 9998,
 				"idekey" 		=> "netbeans-xdebug"
 			}
