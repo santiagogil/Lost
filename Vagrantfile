@@ -2,8 +2,7 @@ Vagrant::Config.run do  | config |
 	config.vm.box = "precise32"
  	config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 	
-	config.vm.forward_port 80, 5080
-	config.vm.forward_port 3306, 3307
+	config.vm.network :hostonly, "33.33.33.33"
 	config.vm.share_folder "public_html" , "/home/vagrant/webroot", "./webroot/"
  
  	config.vm.provision :chef_solo do |chef|
@@ -22,12 +21,12 @@ Vagrant::Config.run do  | config |
 		chef.json = {
 			"mysql" => { 
 				"server_root_password" 	=> "password",
-				"allow_remote_root" 	=> true 
+				"bind_address"			=> "33.33.33.33",
+				"allow_remote_root" 	=> true
 			},
 			"xdebug" => {
-				"remote_host" 	=> "10.0.0.2",
-				"remote_port" 	=> 9998,
-				"idekey" 		=> "netbeans-xdebug"
+				"remote_host" 			=> "33.33.33.1",
+				"idekey" 				=> "netbeans-xdebug"
 			}
 	  	}
 	end
