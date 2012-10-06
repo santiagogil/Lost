@@ -7,15 +7,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <style type="text/css">
 #wrapper {
-	width: 600px;
-	margin: 20px auto 0;
-	font: 1.2em Verdana, Arial, sans-serif;
+    width: 600px;
+    margin: 20px auto 0;
+    font: 1.2em Verdana, Arial, sans-serif;
 }
 input {
-	font-size: 1em;
+    font-size: 1em;
 }
 #submit {
-	padding: 4px 8px;
+    padding: 4px 8px;
+}
+a {
+    text-decoration: none;
 }
 </style>
 </head>
@@ -59,7 +62,7 @@ input {
 		<tr>
 			<td></td>
 			<td><input type="submit" id="submit" value="Test Connection" tabindex="5" /></td>
-			<td></td>
+			<td><a href="info.php">view PHP Info</a></td>
 		</tr>
 	</table>
 
