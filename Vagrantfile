@@ -3,7 +3,7 @@ Vagrant::Config.run do  | config |
  	config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 	
 	config.vm.network :hostonly, "33.33.33.33"
-	config.vm.share_folder "webroot" , "/home/vagrant/webroot", "./webroot/", :group => "www-data" 
+	config.vm.share_folder "webroot" , "/home/vagrant/webroot", "./webroot/", :owner => "www-data" 
  
  	config.vm.provision :chef_solo do |chef|
 		chef.cookbooks_path = ["cookbooks"]
