@@ -2,8 +2,10 @@
 
 * [Vagrant](http://vagrantup.com)
 * Nginx
-* PHP-FPM (with APC, Curl, GD, Mysql e Xdebug modules)
+* PHP-FPM (with APC, Curl, GD, Mysql modules)
+* PHP Extras (Xdebug and PHPUnit)
 * MySQL
+* Laravel Framework
 
 Vagrant is a tool for building and distributing virtualized development environments.
 
@@ -31,5 +33,4 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 
 ## Known Issues
 
-* In first time you are running the command *vagrant up*, is possible that vagrant will return the following message: "VM must be created before running this command. Run `vagrant up` first." In this case you only need reload the configuration with this command:
-	vagrant reload
+* In first time you are running the command *vagrant up*, is possible that vagrant will return the following message: "VM must be created before running this command. Run `vagrant up` first." In this case you only need reload the configuration with this command: *vagrant reload*

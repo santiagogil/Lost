@@ -3,7 +3,7 @@ Vagrant::Config.run do  | config |
  	config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 	
 	config.vm.network :hostonly, "33.33.33.33"
-	config.vm.share_folder "public_html" , "/home/vagrant/webroot", "./webroot/"
+	config.vm.share_folder "webroot" , "/home/vagrant/webroot", "./webroot/", :group => "www-data" 
  
  	config.vm.provision :chef_solo do |chef|
 		chef.cookbooks_path = ["cookbooks"]
@@ -17,6 +17,7 @@ Vagrant::Config.run do  | config |
 		chef.add_recipe "php::module_gd"
 		chef.add_recipe "php::module_mysql"		
 		chef.add_recipe "chef-php-extra::xdebug"
+		chef.add_recipe "chef-php-extra::PHPUnit"
 		chef.add_recipe "php-fpm"
 		chef.json = {
 			"mysql" => { 
@@ -25,8 +26,8 @@ Vagrant::Config.run do  | config |
 				"allow_remote_root" 	=> true
 			},
 			"xdebug" => {
-				"remote_host" 			=> "33.33.33.1",
-				"idekey" 				=> "netbeans-xdebug"
+				"remote_host" 	=> "33.33.33.1",
+				"idekey" 		=> "netbeans-xdebug"
 			}
 	  	}
 	end

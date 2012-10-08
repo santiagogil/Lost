@@ -1,0 +1,3 @@
+[submodule "webroot/laravel"]
+	path = webroot/laravel
+	url = https://github.com/laravel/laravel.git
