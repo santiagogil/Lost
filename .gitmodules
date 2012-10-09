@@ -34,3 +34,6 @@
 [submodule "cookbooks/xml"]
 	path = cookbooks/xml
 	url = https://github.com/opscode-cookbooks/xml.git
+[submodule "cookbooks/yum"]
+	path = cookbooks/yum
+	url = https://github.com/opscode-cookbooks/yum.git
