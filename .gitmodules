@@ -7,3 +7,6 @@
 [submodule "cookbooks/php"]
 	path = cookbooks/php
 	url = https://github.com/opscode-cookbooks/php.git
+[submodule "cookbooks/bluepill"]
+	path = cookbooks/bluepill
+	url = https://github.com/opscode-cookbooks/bluepill.git
