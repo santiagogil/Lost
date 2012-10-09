@@ -22,3 +22,6 @@
 [submodule "cookbooks/dmg"]
 	path = cookbooks/dmg
 	url = https://github.com/opscode-cookbooks/dmg.git
+[submodule "cookbooks/ohai"]
+	path = cookbooks/ohai
+	url = https://github.com/opscode-cookbooks/ohai.git
