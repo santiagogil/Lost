@@ -31,3 +31,6 @@
 [submodule "cookbooks/runit"]
 	path = cookbooks/runit
 	url = https://github.com/opscode-cookbooks/runit.git
+[submodule "cookbooks/xml"]
+	path = cookbooks/xml
+	url = https://github.com/opscode-cookbooks/xml.git
