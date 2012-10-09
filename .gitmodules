@@ -37,3 +37,6 @@
 [submodule "cookbooks/yum"]
 	path = cookbooks/yum
 	url = https://github.com/opscode-cookbooks/yum.git
+[submodule "cookbooks/php-fpm"]
+	path = cookbooks/php-fpm
+	url = https://github.com/yevgenko/cookbook-php-fpm.git
