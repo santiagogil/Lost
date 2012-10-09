@@ -10,3 +10,6 @@
 [submodule "cookbooks/bluepill"]
 	path = cookbooks/bluepill
 	url = https://github.com/opscode-cookbooks/bluepill.git
+[submodule "cookbooks/build-essential"]
+	path = cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git
