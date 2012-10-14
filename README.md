@@ -23,11 +23,12 @@ installed (version 4.2 and later are preferable). The setup from that point forw
 	2. $ git clone --recursive https://github.com/gustavobgama/LEMP-Box.git your-folder
 	3. cd your-folder
 	4. $ vagrant up
+	5. $ sudo su and then # echo "33.33.33.33  laravel.dev" >> /etc/hosts
 	5. Wait a few minutes
 
 ## Results
 
-* NGINX + PHP responding on IP 33.33.33.33 (in browser, type http://33.33.33.33/ and see a default Laravel installation)
+* NGINX + PHP responding on IP 33.33.33.33 (in browser, type http://laravel.dev and see a default Laravel installation)
 * Xdebug ready for NetBeans depuration
 * MySQL connection available form host machine (*Host*: 33.33.33.33, *User*: root, *Password*: password)
 
