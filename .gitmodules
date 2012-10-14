@@ -40,3 +40,6 @@
 [submodule "cookbooks/php-fpm"]
 	path = cookbooks/php-fpm
 	url = https://github.com/yevgenko/cookbook-php-fpm.git
+[submodule "cookbooks/nginx"]
+	path = cookbooks/nginx
+	url = https://github.com/opscode-cookbooks/nginx.git
