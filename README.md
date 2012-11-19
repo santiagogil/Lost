@@ -43,9 +43,3 @@ https://github.com/gustavobgama/LEMP-Box
 It's a work in progress, not tested yet.
 The proyect concist in building a "LEMP on steroids" specifically tuned for our WordPress deployments.
 It will include a lot of config customizations, security sane defaults and monitoring built in.
-=======
-Lost
-====
-
-A Vagrant LEMP box on steroids
->>>>>>> fee9529e996bb664554edf166ca63cf4eb6eecbc
