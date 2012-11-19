@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # [LEMP](http://library.linode.com/lemp-guides) provisioned by chef-solo on Vagrant
 
 * [Vagrant](http://vagrantup.com)
