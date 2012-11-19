@@ -11,14 +11,11 @@ Vagrant::Config.run do  | config |
 		chef.add_recipe "build-essential"
 		chef.add_recipe "mysql::server"
 		chef.add_recipe "nginx"
-		chef.add_recipe "laravel-app"
 		chef.add_recipe "php"
 		chef.add_recipe "php::module_apc"
 		chef.add_recipe "php::module_curl"
 		chef.add_recipe "php::module_gd"
 		chef.add_recipe "php::module_mysql"		
-		chef.add_recipe "chef-php-extra::xdebug"
-		chef.add_recipe "chef-php-extra::PHPUnit"
 		chef.add_recipe "php-fpm"
 		chef.json = {
 			"mysql" => { 
@@ -26,10 +23,6 @@ Vagrant::Config.run do  | config |
 				"bind_address"			=> "33.33.33.33",
 				"allow_remote_root" 	=> true
 			},
-			"xdebug" => {
-				"remote_host" 	=> "33.33.33.1",
-				"idekey" 		=> "netbeans-xdebug"
-			}
 	  	}
 	end
 end
