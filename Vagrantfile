@@ -9,7 +9,8 @@ Vagrant::Config.run do  | config |
 		chef.cookbooks_path = ["cookbooks"]
 #		chef.add_recipe "apt"
 		chef.add_recipe "build-essential"
-		chef.add_recipe "percona-install::server"
+		chef.add_recipe "percona::server"
+    chef.add_recipe "percona::client"
 		chef.add_recipe "nginx"
 		chef.add_recipe "php"
 		chef.add_recipe "php::module_apc"
@@ -18,12 +19,13 @@ Vagrant::Config.run do  | config |
 		chef.add_recipe "php::module_mysql"		
 		chef.add_recipe "php"
     chef.add_recipe "php-fpm"
-		chef.json = {
-			"mysql" => { 
-				"server_root_password" 	=> "password",
-				"bind_address"			=> "33.33.33.33",
-				"allow_remote_root" 	=> true
-			},
-	  	}
-	end
+    chef.add_recipe "database::mysql"
+    chef.json = {
+          "mysql" => {
+                "server_root_password" => "iloverandompasswordsbutthiswilldo",
+                "server_repl_password" => "iloverandompasswordsbutthiswilldo",
+                "server_debian_password" => "iloverandompasswordsbutthiswilldo"
+                          }
+                        }
+  end
 end

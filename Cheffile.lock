@@ -1,7 +1,14 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
+    apt (1.6.0)
+    aws (0.100.4)
     build-essential (1.3.0)
+    database (1.3.6)
+      aws (>= 0.0.0)
+      mysql (>= 1.3.0)
+      postgresql (>= 1.0.0)
+      xfs (>= 0.0.0)
     mysql (2.0.2)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
@@ -10,15 +17,31 @@ SITE
       ohai (>= 1.1.0)
     ohai (1.1.4)
     openssl (1.0.0)
-    percona-install (0.1.4)
     php (1.1.0)
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
       xml (>= 0.0.0)
+    php-fpm (0.3.0)
+      apt (>= 0.0.0)
+      yum (>= 0.0.0)
+    postgresql (2.1.0)
+      openssl (>= 0.0.0)
+    xfs (1.0.0)
     xml (1.1.0)
+    yum (2.0.6)
+
+GIT
+  remote: https://github.com/myplanetdigital/chef-percona.git
+  ref: master
+  sha: d2839b8cd2d5c8ba039705f70d0d14e6a16d3fd1
+  specs:
+    percona (0.0.1)
+      mysql (>= 1.3.0)
 
 DEPENDENCIES
+  database (>= 0)
   nginx (>= 0)
-  percona-install (>= 0)
+  percona (>= 0)
   php (>= 0)
+  php-fpm (>= 0)
 

@@ -14,6 +14,8 @@ site 'http://community.opscode.com/api/v1'
 #   :git => 'https://github.com/findsyou/cookbooks',
 #   :ref => 'postgresql-improvements'
   cookbook 'nginx'
-  cookbook 'percona-install'
+  cookbook 'percona',
+    :git => 'https://github.com/myplanetdigital/chef-percona.git'
   cookbook 'php'
   cookbook 'php-fpm'
+  cookbook 'database'
