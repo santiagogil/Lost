@@ -3,7 +3,7 @@
 
 site 'http://community.opscode.com/api/v1'
 
-# cookbook 'chef-client'
+#  cookbook 'chef-client', '>= 10.20.0'
 
 # cookbook 'apache2', '>= 1.0.0'
 
@@ -13,9 +13,10 @@ site 'http://community.opscode.com/api/v1'
 # cookbook 'postgresql',
 #   :git => 'https://github.com/findsyou/cookbooks',
 #   :ref => 'postgresql-improvements'
+  cookbook 'apt'
   cookbook 'nginx'
   cookbook 'percona',
-    :git => 'https://github.com/myplanetdigital/chef-percona.git'
+    :git => 'https://github.com/phlipper/chef-percona.git'
   cookbook 'php'
   cookbook 'php-fpm'
   cookbook 'database'
