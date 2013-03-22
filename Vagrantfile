@@ -21,7 +21,7 @@ Vagrant::Config.run do  | config |
     chef.add_recipe "php::module_mysql"		
     #chef.add_recipe "php"
     chef.add_recipe "php-fpm"
-    chef.add_recipe "database::mysql"
+    #chef.add_recipe "database::mysql"
     chef.json = {
           "mysql" => {
                 "server_root_password" => "iloverandompasswordsbutthiswilldo",
